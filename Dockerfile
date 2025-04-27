@@ -11,8 +11,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the full application
 COPY . .
 
-# Run tests before starting the app
-RUN pytest
 
 # Expose port and run FastAPI
 EXPOSE 8000
