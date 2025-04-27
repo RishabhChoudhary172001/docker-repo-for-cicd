@@ -6,6 +6,12 @@ app = FastAPI()
 def read_root():
     return {"message": "FastAPI server is running!"}
 
+
+@app.get("/testing")
+def read_root():
+    return {"message": "FastAPI server is running this is the testing endpoint!"}
+
+
 @app.get("/items/{item_id}")
 def read_item(item_id: int):
     return {"item_id": item_id, "message": "Requested item"}
